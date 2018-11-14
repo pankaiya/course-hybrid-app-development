@@ -1,0 +1,68 @@
+<ion-header>
+  <!-- <ion-navbar>
+    <ion-title>
+      mall
+    </ion-title>
+  </ion-navbar> -->
+  <ion-searchbar (ionIput)="getItems($event)">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="assets/imgs/banner.png" alt="">
+  <ul class="navList">
+    <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{item}}</li>
+  </ul>
+  <div [ngSwitch]="isActive">
+    <div *ngSwitchCase="0">
+      <p text-center>—— 沙发 ——</p>
+      <ul class="sofa">
+        <li>
+          <img src="assets/imgs/5.png" alt="">
+        </li>
+        <li>
+          <img src="assets/imgs/6.png" alt="">
+        </li>
+        <li>
+          <img src="assets/imgs/7.png" alt="">
+        </li>
+        <li>
+          <img src="assets/imgs/8.png" alt="">
+        </li>
+      </ul>
+    </div>
+    <div *ngSwitchCase="1">
+      
+    </div>
+    <div *ngSwitchCase="2">
+
+    </div>
+    <div *ngSwitchCase="3">
+
+    </div>
+    <div *ngSwitchCase="4">
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- <ion-slides (ionSlideDidChange)="change()" pager="true" autoplay="1000" loop="true" class="sli">
+    <ion-slide>
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+  </ion-slides> -->
+</ion-content>
